@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+        body {
+            margin: 20px;
+
+        }
+            
+    </Style>
+</head>
+<body>
+    <h1>Queremos saber mas sobre ti</h1>
+
+    <form>
+        <label for="nombre">Nombre:</label>
+        <br>
+        <input type="text" id="nombre" name="nombre">
+        <br><br>
+
+        <label for="email">Correo:</label><br>
+        <input type="email" id="email" name="email">
+        <br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono">
+        <br><br>
+        <button onclick="enviarformulario()">Enviar</button>
+        <br><br>
+        <div id="resultado">aqui nuestro resultado</div>
+
+        <script>
+            function enviarformulario() {
+                let nombre = document.getElementById("nombre").value;
+                let email = document.getElementById("email").value;
+                let telefono = document.getElementById("telefono").value;
+
+                document.getElementById("resultado").textContent ="lo capturado es: "nombre +" "email +" "telefono;"
+                
+            }
+        </script>
+    </form>
+
+</body>
+</html>
